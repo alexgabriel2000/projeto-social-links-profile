@@ -10,37 +10,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-verde-900 flex flex-col justify-center items-center h-screen p-2">
   <script>
     tailwind.config = {
-        theme {
-            extend {
-                colors {
-                  'branco': 'hsl(0, 0%, 100%)',
-                  'verde': 'hsl(75, 94%, 57%)',
-                  'verde 700': 'hsl(0, 0%, 20%)',
-                  'verde 800': 'hsl(0, 0%, 12%)',
-                  'verde 900': 'hsl(0, 0%, 8%)',
+      theme: {
+        extend: {
+          colors: {
+            branco: 'hsl(0, 0%, 100%)',
+              verde: 'hsl(75, 94%, 57%)',
+                'verde-700': 'hsl(0, 0%, 20%)',
+                'verde-800': 'hsl(0, 0%, 12%)',
+                'verde-900': 'hsl(0, 0%, 8%)',
                 },
-                fontFamily {
-                  'inter': '"Inter", sans-serif',
+                fontFamily: {
+                  inter: ['Inter', 'sans-serif'],
+                },
+                fontSize: {
+                  'small': '14px',
+                  'font-nome': '1.5rem',
+                },
+                width: {
+                  '95p': '95%',
                 },
             }
         }
     }
   </script>
 
-<section>
-  <h1>Jessica Randall</h1>
-  <p>London, United Kingdom</p>
-  <p>"Front-end developer and avid reader."</p>
+<section class="flex flex-col items-center bg-verde-800 font-inter w-95p px-2 pt-4 pb-6 rounded-lg">
+  <img class="rounded-full w-24 p-2" src="assets/images/avatar-jessica.jpeg" alt="Imagem de perfil">
+  <h1 class="text-font-nome font-semibold text-white">Jessica Randall</h1>
+  <p class="text-small text-verde font-semibold pb-4">London, United Kingdom</p>
+  <p class="text-small text-white">"Front-end developer and avid reader."</p>
 
-  <ul>
-    <li>GitHub</li>
-    <li>Frontend Mentor</li>
-    <li>LinkedIn</li>
-    <li>Twitter</li>
-    <li>Instagram</li>
+  <ul class="text-center mt-4 w-full flex flex-col gap-3">
+    <li><button class="bg-verde-700 w-95p p-2 rounded-lg text-white">GitHub</button></li>
+    <li><button class="bg-verde-700 w-95p p-2 rounded-lg text-white">Frontend Mentor</button></li>
+    <li><button class="bg-verde-700 w-95p p-2 rounded-lg text-white">LinkedIn</button></li>
+    <li><button class="bg-verde-700 w-95p p-2 rounded-lg text-white">Twitter</button></li>
+    <li><button class="bg-verde-700 w-95p p-2 rounded-lg text-white">Instagram</button></li>
   </ul>
 </section>
 
